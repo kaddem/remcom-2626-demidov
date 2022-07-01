@@ -1,0 +1,28 @@
+.menu {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    color: $color-light;
+  }
+}
+
+.some-item {
+  &:first-child {
+    color: #000;
+  }
+
+  &.second-class {
+    color: #000;
+  }
+}
