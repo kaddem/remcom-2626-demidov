@@ -1,3 +1,8 @@
 .promo {
+  padding: 140px 0;
   background-color: rgba($color-light, .2);
+}
+
+.promo-inner {
+  @include inner;
 }

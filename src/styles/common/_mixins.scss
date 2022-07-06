@@ -1,0 +1,14 @@
+@mixin inner($width: 1278px) {
+  width: $width;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+@mixin section-title {
+  font-family: $font-ral;
+  font-size: 58px;
+  line-height: 68px;
+  font-weight: 300;
+  color: $color-accent;
+  text-align: center;
+}

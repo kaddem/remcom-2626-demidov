@@ -3,3 +3,7 @@
   background-color: $color-dark;
   color: $color-light;
 }
+
+.header-inner {
+  @include inner;
+}
