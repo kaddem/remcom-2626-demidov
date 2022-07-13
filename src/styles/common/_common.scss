@@ -7,9 +7,11 @@
 }
 
 body {
+  padding-top: 98px; // компенсация высоты фиксированной шапки:
   font-family: $font-open;
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
