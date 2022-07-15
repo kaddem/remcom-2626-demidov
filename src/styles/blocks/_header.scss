@@ -34,4 +34,17 @@
   line-height: 33px;
   color: $color-light;
   text-decoration: none;
+
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.header-burger {
+  display: none;
+
+  @media (max-width: $tablet-max) {
+    display: block;
+    margin-left: 35px;
+  }
 }
