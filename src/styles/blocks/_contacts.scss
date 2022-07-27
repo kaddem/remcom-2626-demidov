@@ -1,0 +1,13 @@
+.contacts {
+  padding-top: 140px;
+  padding-bottom: 130px;
+  background-color: rgba($color-light, .2);
+}
+
+.contacts-inner {
+  @include inner;
+}
+
+.contacts-title {
+  @include section-title;
+}

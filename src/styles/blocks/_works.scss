@@ -1,0 +1,25 @@
+.works {
+  padding-top: 140px;
+  padding-bottom: 130px;
+  background-color: rgba($color-light, .2);
+}
+
+.works-inner {
+  @include inner;
+}
+
+.works-title {
+  @include section-title;
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap-half;
+  margin-right: -$gap-half;
+}
+
+.works-item {
+  flex-basis: 25%;
+  padding: $gap-half;
+}
