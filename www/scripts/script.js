@@ -1,18 +1,55 @@
 $(document).ready(function(){
 
-  let serviceList = $('.services-head').addClass('some-class');
+  let isOpen = false;
 
-  console.log(serviceList);
+  $('.js-header-burger').on('click', function(){
+
+    // if (isOpen) {
+    //   $('.js-menu').slideUp();
+    //   isOpen = false;
+
+    //   return;
+    // }
+
+    // $('.js-menu').slideDown();
+    // isOpen = true;
+
+    $('.js-menu').slideToggle();
+
+  });
+
+  // Табы в контактах
+
+  $('.js-tabs-link').on('click', function() {
+    $('.js-tabs-link').removeClass('active');
+    $(this).addClass('active');
+
+    let index = $(this).index('.js-tabs-link');
+
+    $('.js-tabs-content').removeClass('active');
+    $('.js-tabs-content').eq(index).addClass('active');
+  });
 
 
-  // $('.services-title').text('<i>arondondon</i>');
+  // Фильтр в работах
+  $('.js-filter-link').on('click', function(){
+    let filter = $(this).data('filter');
 
+    if (filter === 'all') {
+      $('.js-works-item').show();
 
-  $('.services-title').text('<i>arondondon</i><script>alert("Гони бабки - сайт заблокирован!");</script>');
+      return;
+    }
 
+    $('.js-works-item').each(function(){
+      let type = $(this).data('type');
 
-
-
-
+      if (filter === type) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
 
 });
