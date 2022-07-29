@@ -10,3 +10,56 @@
 .gallery-title {
   @include section-title;
 }
+
+.gallery-slick {
+  padding: 0 50px;
+
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    font-size: 0;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Font_Awesome_5_regular_arrow-alt-circle-right.svg/1200px-Font_Awesome_5_regular_arrow-alt-circle-right.svg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      margin: 0 5px;
+    }
+
+    button {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #000;
+      font-size: 0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slick-active button {
+      background-color: #000;
+    }
+  }
+}
+
+

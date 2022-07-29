@@ -35,6 +35,9 @@ $(document).ready(function(){
   $('.js-filter-link').on('click', function(){
     let filter = $(this).data('filter');
 
+    $('.js-filter-link').removeClass('active');
+    $(this).addClass('active');
+
     if (filter === 'all') {
       $('.js-works-item').show();
 
@@ -50,6 +53,26 @@ $(document).ready(function(){
         $(this).hide();
       }
     });
+  });
+
+  // Вопросы и ответы
+  let prevBtn;
+
+  $('.js-faq-btn').on('click', function() {
+    if (this === prevBtn) {
+      $(this).next().slideToggle();
+    } else {
+      $('.js-faq-btn').next().slideUp();
+      $(this).next().slideDown();
+    }
+
+    prevBtn = this;
+  });
+
+  // Slick slider
+
+  $('.js-gallery-slick').slick({
+    dots: true
   });
 
 });
